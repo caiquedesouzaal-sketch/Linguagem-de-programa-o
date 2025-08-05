@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O que é Linguagem de Programação?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="animated-title">O que é Linguagem de Programação?</h1>
+    <p>Descubra como falamos com os computadores!</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>💡 Introdução</h2>
+      <p>Linguagem de programação é a forma como damos comandos aos computadores. Usando diferentes linguagens, é possível construir desde sites simples até sistemas complexos de inteligência artificial.</p>
+    </section>
+
+    <section>
+      <h2>🧾 Exemplos de Linguagens</h2>
+      <div class="language-grid">
+        <div class="language">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <p>Python</p>
+        </div>
+        <div class="language">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <p>JavaScript</p>
+        </div>
+        <div class="language">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+          <p>C++</p>
+        </div>
+        <div class="language">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+          <p>Java</p>
+        </div>
+        <div class="language">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+          <p>HTML</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎯 Aplicações da Programação</h2>
+      <ul>
+        <li>Criação de jogos, como Minecraft e Fortnite</li>
+        <li>Desenvolvimento de apps como WhatsApp e Instagram</li>
+        <li>Automação de tarefas e robôs</li>
+        <li>Criação de sites como este!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Curiosidades</h2>
+      <ul>
+        <li>A primeira linguagem foi criada nos anos 1950</li>
+        <li>Python tem esse nome por causa de um grupo de comédia (Monty Python)</li>
+        <li>Todo site que você acessa usa código por trás</li>
+      </ul>
+      <button id="btn-curiosidade">Mostrar mais curiosidades</button>
+      <div id="extra-curiosidade" class="hidden animated-box">
+        <p>Você pode programar um robô real com Arduino ou Raspberry Pi!</p>
+        <p>Programação está presente em carros, geladeiras e até brinquedos!</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>📘 Como Aprender Programação?</h2>
+      <ul>
+        <li>Comece com Python ou Scratch</li>
+        <li>Use sites como Code.org, Khan Academy, Replit</li>
+        <li>Pratique criando jogos e sites simples</li>
+      </ul>
+      <button onclick="surpresa()">Surpreenda-me!</button>
+      <p id="mensagem-surpresa"></p>
+    </section>
+
+    <section>
+      <h2>🧪 Quiz Rápido</h2>
+      <p>Qual dessas <strong>NÃO</strong> é uma linguagem de programação?</p>
+      <button class="quiz-btn" onclick="responderQuiz(this, false)">C#</button>
+      <button class="quiz-btn" onclick="responderQuiz(this, false)">Ruby</button>
+      <button class="quiz-btn" onclick="responderQuiz(this, true)">Bluetooth</button>
+      <p id="quiz-feedback"></p>
+    </section>
+
+    <section class="footer">
+      <p>Site criado por Caique, Carlos, Yuri e João | Feira de Ciências - 2025</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
