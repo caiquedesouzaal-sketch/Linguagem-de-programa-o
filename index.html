@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  <h3> testando uma parada </h3>
   <header>
     <h1 class="animated-title">O que é Linguagem de Programação?</h1>
     <p>Descubra como falamos com os computadores!</p>
@@ -89,6 +89,50 @@
       <p id="quiz-feedback"></p>
     </section>
 
+    <!-- NOVO: Exibição do código Python -->
+    <section>
+      <h2>🖥️ Exemplo de Código em Python (com PyQt5)</h2>
+      <p>Aqui está um exemplo de como um programa em Python pode interagir com uma interface gráfica usando PyQt5:</p>
+      <pre><code>
+from PyQt5 import uic, QtWidgets
+
+def funcao_principal():
+    linha1 = formulario.lineEdit.text()
+    linha2 = formulario.lineEdit_2.text()
+    linha3 = formulario.lineEdit_3.text()
+    
+    if formulario.radioButton.isChecked():
+        print("Categoria Eletronicos selecionada")
+    elif formulario.radioButton_2.isChecked():
+        print("Categoria Informatica selecionada")
+    else:
+        print("Categoria Alimentos selecionada")
+
+    print("Código:", linha1)
+    print("Descricao:", linha2)
+    print("Preco", linha3)
+
+app = QtWidgets.QApplication([])
+formulario = uic.loadUi("formulario2.ui")
+formulario.pushButton.clicked.connect(funcao_principal)
+
+formulario.show()
+app.exec()
+      </code></pre>
+    </section>
+
+    <!-- NOVO: Vídeo do YouTube incorporado -->
+    <section>
+      <h2>🎥 Veja um exemplo em vídeo</h2>
+      <iframe width="640" height="360"
+              src="https://www.youtube.com/embed/SpHp0IfhorY"
+              title="Exemplo com PyQt5"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </section>
+
     <section class="footer">
       <p>Site criado por Caique, Carlos, Yuri e João | Feira de Ciências - 2025</p>
     </section>
@@ -96,6 +140,6 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
+
 
