@@ -11,6 +11,9 @@ body {
   line-height: 1.6;
   padding: 20px;
   animation: fadeIn 1.2s ease-in;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px; /* espaço para o botão fixo */
 }
 
 @keyframes fadeIn {
@@ -108,23 +111,6 @@ button:hover {
   font-size: 1rem;
 }
 
-/* Mostrar/ocultar curiosidades extras com efeito suave */
-.hidden {
-  display: none;
-}
-
-.animated-box {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.6s ease, max-height 0.6s ease;
-}
-
-.animated-box.show {
-  opacity: 1;
-  max-height: 200px;
-}
-
 #mensagem-surpresa {
   margin-top: 10px;
   font-style: italic;
@@ -161,4 +147,72 @@ button:hover {
 
 .language p {
   font-weight: bold;
+}
+
+/* Código Python */
+.codigo-python {
+  background-color: rgba(0,0,0,0.3);
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  color: #00ff88;
+  overflow-x: auto;
+}
+
+.saida-python {
+  background-color: rgba(255, 218, 121, 0.15);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #90ee90;
+  font-family: 'Courier New', monospace;
+}
+
+/* Botão fixo de curiosidades */
+#btn-curiosidade-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffda79;
+  color: #333;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1000;
+  max-width: 180px;
+  text-align: center;
+}
+
+#btn-curiosidade-fixo:hover {
+  background-color: #ffd54f;
+  transform: scale(1.1);
+}
+
+#curiosidade-ativa {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(255, 218, 121, 0.15);
+  color: #90ee90;
+  border-radius: 12px;
+  padding: 15px 20px;
+  max-width: 280px;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  min-height: 60px;
+  line-height: 1.3;
+  user-select: none;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#curiosidade-ativa.show {
+  opacity: 1;
+  pointer-events: auto;
 }
