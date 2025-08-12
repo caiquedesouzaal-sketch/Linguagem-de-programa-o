@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>O que é Linguagem de Programação?</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -46,6 +46,23 @@
     </section>
 
     <section>
+      <h2>🐍 Exemplo em Python</h2>
+      <p>Veja um código simples em Python e sua saída:</p>
+
+      <pre class="codigo-python">
+print("Olá, mundo!")
+x = 5 + 3
+print("Resultado:", x)
+      </pre>
+
+      <div class="saida-python">
+        <strong>Saída:</strong><br/>
+        Olá, mundo!<br/>
+        Resultado: 8
+      </div>
+    </section>
+
+    <section>
       <h2>🎯 Aplicações da Programação</h2>
       <ul>
         <li>Criação de jogos, como Minecraft e Fortnite</li>
@@ -61,12 +78,9 @@
         <li>A primeira linguagem foi criada nos anos 1950</li>
         <li>Python tem esse nome por causa de um grupo de comédia (Monty Python)</li>
         <li>Todo site que você acessa usa código por trás</li>
+        <li>Você pode programar um robô real com Arduino ou Raspberry Pi!</li>
+        <li>Programação está presente em carros, geladeiras e até brinquedos!</li>
       </ul>
-      <button id="btn-curiosidade">Mostrar mais curiosidades</button>
-      <div id="extra-curiosidade" class="hidden animated-box">
-        <p>Você pode programar um robô real com Arduino ou Raspberry Pi!</p>
-        <p>Programação está presente em carros, geladeiras e até brinquedos!</p>
-      </div>
     </section>
 
     <section>
@@ -76,7 +90,6 @@
         <li>Use sites como Code.org, Khan Academy, Replit</li>
         <li>Pratique criando jogos e sites simples</li>
       </ul>
-      <button onclick="surpresa()">Surpreenda-me!</button>
       <p id="mensagem-surpresa"></p>
     </section>
 
@@ -94,8 +107,10 @@
     </section>
   </main>
 
+  <!-- Botão fixo de curiosidades -->
+  <button id="btn-curiosidade-fixo">Clique para curiosidade</button>
+  <div id="curiosidade-ativa"></div>
+
   <script src="script.js"></script>
 </body>
-
 </html>
-
