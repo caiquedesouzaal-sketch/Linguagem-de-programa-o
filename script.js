@@ -5,15 +5,26 @@ window.addEventListener('load', () => {
   }, 800);
 });
 
-// Mostrar/ocultar curiosidades extras com animação
-const botao = document.getElementById('btn-curiosidade');
-const extra = document.getElementById('extra-curiosidade');
+// Curiosidades para mostrar no botão fixo
+const curiosidades = [
+  "A primeira linguagem foi criada nos anos 1950",
+  "Python tem esse nome por causa de um grupo de comédia (Monty Python)",
+  "Todo site que você acessa usa código por trás",
+  "Você pode programar um robô real com Arduino ou Raspberry Pi!",
+  "Programação está presente em carros, geladeiras e até brinquedos!"
+];
 
-botao.addEventListener('click', () => {
-  extra.classList.toggle('show');
-  botao.textContent = extra.classList.contains('show')
-    ? 'Ocultar curiosidades'
-    : 'Mostrar mais curiosidades';
+const btnCuriosidadeFixo = document.getElementById('btn-curiosidade-fixo');
+const curiosidadeAtiva = document.getElementById('curiosidade-ativa');
+let indiceCuriosidade = 0;
+
+btnCuriosidadeFixo.addEventListener('click', () => {
+  curiosidadeAtiva.textContent = curiosidades[indiceCuriosidade];
+  curiosidadeAtiva.classList.add('show');
+  indiceCuriosidade++;
+  if (indiceCuriosidade >= curiosidades.length) {
+    indiceCuriosidade = 0;
+  }
 });
 
 // Quiz
@@ -33,7 +44,7 @@ function responderQuiz(botao, certo) {
   feedback.style.animation = 'pulse 0.6s ease';
 }
 
-// Botão surpresa
+// Botão surpresa (de curiosidades rápidas)
 function surpresa() {
   const frases = [
     "Você pode programar jogos usando apenas o navegador!",
